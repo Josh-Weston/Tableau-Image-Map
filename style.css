@@ -1,0 +1,30 @@
+#canvasbox {
+	position: absolute;
+	left: 0;
+	top: 0;
+	z-index: 9;
+}
+
+#contextOptions {
+	position: fixed;
+	z-index: 10;
+	border: 1px solid silver;
+    height: 50px;
+    box-shadow: 2px 5px 2px #eee;
+    padding: 10px;
+	display: none;
+	background-color: #fff;
+}
+
+.cursor {
+	cursor: crosshair;
+}
+
+#image-container {
+	position: relative;
+}
+
+#coords-table {
+	text-align: center;
+	width: 200px;
+}
