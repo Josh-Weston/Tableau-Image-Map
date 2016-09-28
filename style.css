@@ -1,4 +1,4 @@
-#canvasbox {
+#svgbox {
 	position: absolute;
 	left: 0;
 	top: 0;
@@ -9,11 +9,51 @@
 	position: fixed;
 	z-index: 10;
 	border: 1px solid silver;
-    height: 50px;
-    box-shadow: 2px 5px 2px #eee;
     padding: 10px;
 	display: none;
 	background-color: #fff;
+    width: 120px;
+}
+
+#contextOptions > ul {
+    list-style: none;
+    padding: 0;
+}
+
+.customButton {
+    border-radius: 3px;
+    font-family: sans-serif;
+    font-size: 12px;
+    padding: 5px 10px 5px 10px;
+    text-align: center;
+    color: #fff;
+}
+
+.customButton:hover {
+    cursor: pointer;
+}
+
+#contextOptions > ul > li {
+    margin-top: 5px;
+    background-color: #02b3e4;
+    color: white;
+}
+
+#contextOptions > ul > li:hover {
+    cursor: pointer;
+    background-color: #028bb1;
+    color: #cccccc;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+#btnNewPath {
+    border: 1px solid #8d8d8d;
+    background: linear-gradient(141deg, #0fb8ad 0%, #1fc8db 51%, #2cb5e8 75%);
+    margin-bottom: 30px;
+}
+
+#btnNewPath:hover {
+    background: #028bb1;
 }
 
 .cursor {
@@ -22,9 +62,43 @@
 
 #image-container {
 	position: relative;
+    height: 100%;
 }
 
 #coords-table {
 	text-align: center;
 	width: 200px;
+}
+
+#svgbox path {
+    fill: transparent;
+    stroke-width: .5;
+    stroke: blue;
+    fill-opacity: .5;
+}
+
+#img-container_drop_container {
+    height: 70%;
+    padding: 100px;
+}
+
+#img-container_drop {
+    width: 100%;
+    height: 100%;
+    border: 5px dashed black;
+    border-radius: 5px;
+    font-family: sans-serif;
+    font-size: 32px;
+    text-align: center;
+}
+
+#img-container_drop > span {
+    
+    display: inline-block;
+    position: relative;
+    top: 50%;
+}
+
+body, html {
+    height:100%;
 }

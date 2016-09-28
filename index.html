@@ -3,19 +3,29 @@
 	<head>
 		<link href="style.css" rel=stylesheet type="text/css">
 		<script src="https://code.jquery.com/jquery-3.1.0.min.js"></script>
+        <script src="knockout-3.4.0.js" type="text/javascript"></script>
 		<script src="mapPoints.js" type="text/javascript"></script>
 	</head>
 
 	<body>
 		<div id="image-container">
-			<img id="main-img" src="img/canada_small.png">
-			<canvas id='canvasbox'></canvas>
+			<img id="main-img">
+            <div id="img-container_drop_container">
+                <div id="img-container_drop"><span>DRAG IMAGE FILE HERE</span></div>
+            </div>
+    
+            <svg id="svgbox" xmlns="http://www.w3.org/2000/svg">
+            </svg>
 		</div>
-		
+        		
 		<div id="contextOptions">
-			<button id="btnNewPath" type="button">New Path</button>
+            <div id="btnNewPath" class="customButton">New Path</div>
+            <ul data-bind="foreach: shapes">
+                <li class="customButton" data-bind="text: name"></li>
+            </ul>
 		</div>
 		
+        <!--
 		<table id="coords-table">
 			<thead>
 				<tr>
@@ -26,7 +36,7 @@
 			</thead>
 			<tbody>
 			</tbody>
-		</table>
+		</table>-->
 		<script>init();</script>
 	</body>
 
